@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.mobileNavContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    box-shadow: 0px -1px 5px #888;
+}
+
+.mobileNav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    color: #111;
+    font-weight: 500;
+
+}
+
+li {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.topBar {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    padding: 20px;
+    /* border-bottom: 1px solid #888; */
+}
+
+.logo {
+    box-shadow: 0px 0px 1px #888, 0px 0px 2px #888;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+input {
+    padding: 10px 10px;
+    outline: none;
+    box-shadow: 0px 0px 1px #888, 0px 0px 2px #888;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.searchBtn {
+    padding: 10px;
+    width: 60px;
+    border: none;
+    box-shadow: 0px 0px 1px #888, 0px 0px 2px #888;
+    background-color: #fff;
+    font-size: 12px;
+    border-radius: 5px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.songContainer {
+    width: 90px;
+}
+
+img {
+    width: 150px !important;
+}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'styles.css' %}" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class='mobileNavContainer'>
+            <div class="mobileNav">
+                <ul>
+                    <li>Home Page</li>
+                    <li>About Page</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="topBar">
+            <div class="logo">
+                <h4>Music</h4>
+            </div>
+
+            <div class="search">
+                <form action="search" method="GET">
+                    {% csrf_token %}
+                    <input type="text" name="title" placeholder="search...">
+                    <button type="submit" class="searchBtn">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="songContainer">
+            {% if count == 0 %}
+            <h4>Not found</h4>
+            {% endif %}
+
+            {% for post in file %}
+            <div class="song">
+                <img class='img' src={{post.imageURL}} alt="">
+                <h4>{{post.title}}
+                <a href='{{post.song.url}}' download='{{post.song.url}}'>Download</a>
+            </div>
+            {% endfor %}
+        </div>
+
+    </body>
+</html>
